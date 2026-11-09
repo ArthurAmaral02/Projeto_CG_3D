@@ -5,4 +5,5 @@ Opa guys, esse é o repo novo do novo projeto que legal né, sejam bem vindos
 obrigada arthur
 
 dale
+
 nos não vamos fazer ele pensando em usar o visual estudio community, então quem usar o windows vai ter que passar os arquivos para ele
