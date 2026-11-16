@@ -1,0 +1,5 @@
+# Artefatos de build (gerados pelo Makefile/Docker)
+build/
+curvas
+*.o
+*.d

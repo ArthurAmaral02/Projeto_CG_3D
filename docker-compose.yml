@@ -1,0 +1,46 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        HOST_UID: ${HOST_UID:-1000}
+        HOST_GID: ${HOST_GID:-1000}
+    image: projeto-cg-3d:latest
+    container_name: projeto-cg-3d
+    working_dir: /app
+
+    # Roda com o mesmo UID/GID do host para não criar arquivos como root.
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+
+    # O socket X11 e o MIT-SHM ficam no host; network/ipc host simplificam
+    # a conexão com o XWayland/Xorg.
+    network_mode: host
+    ipc: host
+
+    environment:
+      DISPLAY: ${DISPLAY:-:0}
+      # 1 = renderização por software (llvmpipe), funciona sem GPU.
+      # Use 0 ao habilitar o passthrough de /dev/dri (ver docs/dependencias-3d.md).
+      LIBGL_ALWAYS_SOFTWARE: ${LIBGL_ALWAYS_SOFTWARE:-1}
+
+    volumes:
+      # Código do host montado no container: edite no host e recompile aqui.
+      - .:/app
+      # Socket do servidor X11/XWayland do host.
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # Descomente se o seu servidor X usar ~/.Xauthority (Xorg clássico):
+      # - ${XAUTHORITY:-$HOME/.Xauthority}:/home/dev/.Xauthority:ro
+      # GPU: descomente junto com group_add e LIBGL_ALWAYS_SOFTWARE=0
+      # (detalhes e requisitos em docs/dependencias-3d.md).
+      # - /dev/dri:/dev/dri
+
+    # Necessário junto com o mapeamento de /dev/dri para acessar a GPU.
+    # group_add:
+    #   - "${VIDEO_GID:-985}"
+    #   - "${RENDER_GID:-989}"
+
+    stdin_open: true
+    tty: true
+
+    # Compila o que mudou e abre o visualizador. Para abrir outro .obj:
+    #   docker compose run --rm app ./curvas desenhos/rosa.obj

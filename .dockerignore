@@ -1,0 +1,12 @@
+.git
+.gitignore
+build
+curvas
+*.o
+*.d
+*.dll
+*.exe
+*.pdb
+*.ilk
+pdf_da_atividade
+docs
