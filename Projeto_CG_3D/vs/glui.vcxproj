@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{5A1C2F3E-7B41-4D2A-9C1E-0F3B2A6D8E02}</ProjectGuid>
+    <RootNamespace>glui</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Comum.props" />
+  </ImportGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>GLUI_FREEGLUT;GLUI_BUILDING_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\third_party\glui\src\algebra3.cpp" />
+    <ClCompile Include="..\third_party\glui\src\arcball.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_add_controls.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_bitmaps.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_button.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_checkbox.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_column.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_commandline.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_control.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_edittext.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_filebrowser.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_list.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_listbox.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_mouse_iaction.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_node.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_panel.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_radio.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_rollout.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_rotation.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_scrollbar.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_separator.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_spinner.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_statictext.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_textbox.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_translation.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_tree.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_treepanel.cpp" />
+    <ClCompile Include="..\third_party\glui\src\glui_window.cpp" />
+    <ClCompile Include="..\third_party\glui\src\quaternion.cpp" />
+    <ClCompile Include="..\third_party\glui\src\viewmodel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\third_party\glui\include\GL\glui.h" />
+    <ClInclude Include="..\third_party\glui\src\algebra3.h" />
+    <ClInclude Include="..\third_party\glui\src\arcball.h" />
+    <ClInclude Include="..\third_party\glui\src\glui_bitmap_img_data.h" />
+    <ClInclude Include="..\third_party\glui\src\glui_internal.h" />
+    <ClInclude Include="..\third_party\glui\src\glui_internal_control.h" />
+    <ClInclude Include="..\third_party\glui\src\quaternion.h" />
+    <ClInclude Include="..\third_party\glui\src\tinyformat.h" />
+    <ClInclude Include="..\third_party\glui\src\viewmodel.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

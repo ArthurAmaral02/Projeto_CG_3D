@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{5A1C2F3E-7B41-4D2A-9C1E-0F3B2A6D8E01}</ProjectGuid>
+    <RootNamespace>freeglut</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Comum.props" />
+  </ImportGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;_WIN32_WINNT=0x0601;WINVER=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(TerceirosDir)freeglut\msvc;$(TerceirosDir)freeglut\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\third_party\freeglut\src\fg_callbacks.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_cursor.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_display.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_ext.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_font.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_font_data.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_gamemode.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_geometry.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_gl2.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_init.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_input_devices.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_joystick.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_main.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_menu.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_misc.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_overlay.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_spaceball.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_state.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_stroke_mono_roman.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_stroke_roman.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_structure.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_teapot.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_videoresize.c" />
+    <ClCompile Include="..\third_party\freeglut\src\fg_window.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_cmap_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_cursor_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_display_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_ext_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_gamemode_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_init_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_input_devices_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_joystick_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_main_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_menu_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_spaceball_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_state_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_structure_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\mswin\fg_window_mswin.c" />
+    <ClCompile Include="..\third_party\freeglut\src\util\xparsegeometry_repl.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\third_party\freeglut\include\GL\freeglut.h" />
+    <ClInclude Include="..\third_party\freeglut\include\GL\freeglut_ext.h" />
+    <ClInclude Include="..\third_party\freeglut\include\GL\freeglut_std.h" />
+    <ClInclude Include="..\third_party\freeglut\include\GL\freeglut_ucall.h" />
+    <ClInclude Include="..\third_party\freeglut\include\GL\glut.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_callback_macros.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_gl2.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_init.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_internal.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_teapot_data.h" />
+    <ClInclude Include="..\third_party\freeglut\src\fg_version.h" />
+    <ClInclude Include="..\third_party\freeglut\src\mswin\fg_internal_mswin.h" />
+    <ClInclude Include="..\third_party\freeglut\src\util\xparsegeometry_repl.h" />
+    <ClInclude Include="..\third_party\freeglut\msvc\config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

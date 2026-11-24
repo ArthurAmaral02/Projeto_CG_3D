@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Configuracoes compartilhadas por todos os projetos da solucao. -->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <RaizProjeto>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))</RaizProjeto>
+    <TerceirosDir>$(RaizProjeto)third_party\</TerceirosDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Ignora a integracao global do vcpkg ("vcpkg integrate install"): ela
+         ligaria automaticamente outras copias de GLUT/GLUI instaladas na maquina. -->
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <OutDir>$(RaizProjeto)build\vs\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(RaizProjeto)build\vs\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SDLCheck>false</SDLCheck>
+      <!-- Cabecalhos incluidos com <...> (bibliotecas de terceiros) sem avisos. -->
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+      <!-- FreeGLUT e GLUI ligadas estaticamente (sem DLLs). -->
+      <PreprocessorDefinitions>FREEGLUT_STATIC;FREEGLUT_LIB_PRAGMAS=0;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(TerceirosDir)freeglut\include;$(TerceirosDir)glui\include;$(TerceirosDir)stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

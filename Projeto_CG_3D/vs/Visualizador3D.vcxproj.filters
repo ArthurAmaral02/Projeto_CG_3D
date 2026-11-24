@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Cabecalhos">
+      <UniqueIdentifier>{c031d6fd-25ad-56a3-9c8c-d5f58c4c7381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Codigo-fonte">
+      <UniqueIdentifier>{1143cc10-f2df-5b32-9181-02c7e2bb9902}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Aplicacao.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ArquivoOBJ.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AutoTeste.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Bezier.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Camera.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Caminhos.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CoordenadasTextura.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogoArquivo.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Imagem.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Malha.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Matriz4.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Menu.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OrdenacaoProfundidade.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Textura.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Transformacoes.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualizacao.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Codigo-fonte</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Aplicacao.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ArquivoOBJ.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AutoTeste.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Bezier.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Camera.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Caminhos.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Configuracao.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CoordenadasTextura.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\DialogoArquivo.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Imagem.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Malha.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matriz4.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Menu.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OpenGL.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\OrdenacaoProfundidade.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Ponto.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Textura.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Transformacoes.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Vetor.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualizacao.h">
+      <Filter>Cabecalhos</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

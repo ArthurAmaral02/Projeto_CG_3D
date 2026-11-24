@@ -1,0 +1,14 @@
+# Artefatos de build (Makefile/Docker e Visual Studio: tudo vai para build/)
+build/
+visualizador3d
+curvas
+*.o
+*.d
+
+# Arquivos locais do Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+
+# Modelos salvos pelo botao "Salvar OBJ" com o nome padrao
+modelos/salvo.obj
