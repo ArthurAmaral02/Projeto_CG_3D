@@ -1,7 +1,7 @@
 # Projeto_CG_3D
 Projeto de CG em 3D
 
-Opa guys, esse é o repo novo do novo projeto que legal né, sejam bem vindos
+Opa guys, esse é o repositório novo do novo projeto que legal né, sejam bem vindos
 obrigada arthur
 
 dale
